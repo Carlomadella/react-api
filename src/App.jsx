@@ -33,12 +33,12 @@ function App() {
           {actresses.map((actress) => {
             return(
               <>
-                <div className="col-12 col-md-6 col-lg-3">
+                <div className="col-12 col-md-6 col-lg-3 gy-4">
                   <div>
                     <div className="card-image">
                       <img src={actress.image} className="img-fluid" />
                     </div>
-                    <div className="card-info bg-primary">
+                    <div className="card-info bg-primary text-white">
                       <h3>{actress.name}</h3>
                       <p><em> Birth year:{actress.birth_year}</em></p>
                       <br />
