@@ -1,6 +1,21 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function App() {
+
+  // definizione variabile di stato per le attrici
+  const {actress, setActress} = useState ([]);
+
+  // definizione della funzione che effettua la chiamata axios
+  const getActress = () => {
+    axios.get('https://lanciweb.github.io/demo/api/actresses/').then((resp) =>{
+      console.log(resp.data)
+    })
+  }
+
+  useEffect (() => getActress(), [])
+
   return(
     <>
       <div className="container-fluid bg-primary">
